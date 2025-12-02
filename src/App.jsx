@@ -33,7 +33,8 @@ export default function App() {
         products,
       });
 
-      const aiText = response.data.choices[0].message.content;
+      const aiText = response.data.choices?.[0]?.message?.content || response.data.choices?.[0]?.text || "";
+
 
       const recommendedNames = aiText
         .split("\n")
