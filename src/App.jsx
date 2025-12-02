@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import ProductList from "./components/ProductList";
-import { OPENROUTER_API_KEY } from "./config";
 
 export default function App() {
   const [preference, setPreference] = useState("");
@@ -28,35 +27,14 @@ export default function App() {
     setLoading(true);
     setRecommendedProducts([]);
 
-    const prompt = `
-You are a product recommendation AI.
-Here are the available products:
-${productListString}
-
-User preference: "${preference}"
-
-From the list, recommend 2–3 product NAMES only.
-        `;
-
     try {
-      const response = await axios.post(
-        "https://openrouter.ai/api/v1/chat/completions",
-        {
-          model: "openai/gpt-4o-mini",
-          messages: [{ role: "user", content: prompt }],
-          max_tokens: 100,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${OPENROUTER_API_KEY}`,
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await axios.post("/api/recommend", {
+        preference,
+        products,
+      });
 
       const aiText = response.data.choices[0].message.content;
 
-      // Extract product names
       const recommendedNames = aiText
         .split("\n")
         .map((line) => line.replace("-", "").trim())
@@ -76,6 +54,7 @@ From the list, recommend 2–3 product NAMES only.
 
     setLoading(false);
   };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-200 via-purple-200 to-blue-200 text-white p-6">
       <h1 className="text-3xl text-black font-extrabold text-center mb-6"> AI Product Recommendation System </h1>
