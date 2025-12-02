@@ -82,7 +82,7 @@ From the list, recommend 2–3 product NAMES only.
       <div className="max-w-2xl mx-auto text-black bg-white/70 backdrop-blur-xl shadow-2xl rounded-3xl p-8 border border-white/40">
         <label className="block mb-2 text-lg">Enter your preference:</label>
         <input value={preference} onChange={(e) => setPreference(e.target.value)}
-          placeholder='type here' className="w-full p-3 rounded-lg bg-white focus:outline-none border-1 border-black" />
+          placeholder='example:"best camera phone"' className="w-full p-3 rounded-lg bg-white focus:outline-none border-1 border-black" />
         <button onClick={handleAskAI} disabled={loading} className="mt-4 w-full bg-black hover:bg-gray-700 text-white p-3 rounded-lg text-lg font-semibold disabled:bg-gray-600" >
           {loading ? "Getting Recommendation..." : "Ask AI"} </button>
         <h2 className="text-xl font-semibold mt-6">All Products</h2>
