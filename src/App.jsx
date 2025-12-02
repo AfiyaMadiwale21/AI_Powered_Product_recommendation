@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import ProductList from "./components/ProductList";
-import { OPENROUTER_API_KEY } from "./config";
+const OPENROUTER_API_KEY = import.meta.env.VITE_OPENROUTER_API_KEY;
 
 export default function App() {
   const [preference, setPreference] = useState("");
