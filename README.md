@@ -21,8 +21,6 @@ A **React-based frontend app** that recommends products to users based on their 
 
 ---
 
-## 🚀 Demo
-
-![Demo Screenshot](screenshot.png)  
+## 🚀 Demo  
 *<img width="1522" height="802" alt="image" src="https://github.com/user-attachments/assets/a13d35a8-377b-43b0-b242-79be537e040c" />
 *  
