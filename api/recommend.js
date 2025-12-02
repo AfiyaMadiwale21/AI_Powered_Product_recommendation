@@ -14,7 +14,7 @@ Here are the available products:
 ${products.map((p) => `${p.name} - ₹${p.price}`).join("\n")}
 User preference: "${preference}"
 From the list, recommend 2–3 product NAMES only.
-    `;
+`;
 
         const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
             method: "POST",
@@ -30,7 +30,18 @@ From the list, recommend 2–3 product NAMES only.
         });
 
         const data = await response.json();
-        return res.status(200).json(data);
+
+        // FIX: Return format React expects
+        return res.status(200).json({
+            choices: [
+                {
+                    message: {
+                        content: data?.choices?.[0]?.message?.content || ""
+                    }
+                }
+            ]
+        });
+
     } catch (err) {
         console.error(err);
         return res.status(500).json({ error: "Server error" });
