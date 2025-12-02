@@ -2,8 +2,7 @@
     "version": 2,
     "functions": {
         "api/recommend.js": {
-            "buildCommand": "npm run build",
-  "outputDirectory": "dist"
+           
         }
     }
 }
