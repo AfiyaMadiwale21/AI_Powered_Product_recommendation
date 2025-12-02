@@ -1,16 +1,28 @@
-# React + Vite
+# AI Product Recommendation System
+A **React-based frontend app** that recommends products to users based on their preferences using AI. Users can enter their preferences, and the AI filters and displays the most suitable products from a pre-defined list.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **AI-powered recommendations**: Suggests 2–3 products based on user input.  
+- **All products display**: Shows the complete list of available products.  
+- **Frontend-only**: Uses OpenRouter Browser Key for safe AI calls.  
+- **Responsive design**: Built with Tailwind CSS for smooth gradients and mobile-friendly layout.  
+- **Interactive UI**: User-friendly input field and loading indicator while AI generates recommendations.  
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📦 Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend**: React, Tailwind CSS  
+- **AI API**: OpenRouter API (Browser Key / Client Key)  
+- **Deployment**: Vercel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Demo
+
+![Demo Screenshot](screenshot.png)  
+*<img width="1522" height="802" alt="image" src="https://github.com/user-attachments/assets/a13d35a8-377b-43b0-b242-79be537e040c" />
+*  
