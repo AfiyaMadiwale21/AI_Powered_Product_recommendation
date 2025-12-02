@@ -30,6 +30,9 @@ From the list, recommend 2–3 product NAMES only.
         });
 
         const data = await response.json();
+        const aiText = data.choices?.[0]?.message?.content || data.choices?.[0]?.text || "";
+
+        return res.status(200).json({ aiText });
 
         // FIX: Return format React expects
         return res.status(200).json({
